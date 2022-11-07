@@ -5,6 +5,12 @@ Find the node in the BST that the node's value equals val and return the subtree
 
 """
 
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 
 def searchBST(root, val: int):
            
