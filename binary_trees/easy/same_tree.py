@@ -33,7 +33,7 @@ def bfs(root):
     
     while len(queue) > 0:
         
-        element = queue.pop()
+        element = queue.pop(0)
 
         if element is None:
             result.append(element)
