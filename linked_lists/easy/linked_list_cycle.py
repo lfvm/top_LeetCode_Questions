@@ -35,6 +35,20 @@ class Solution:
             if slow == fast and fast and slow:
                 return True
 
+    def hasCycle2(self, head) -> bool:
+        visited = set()
+        current = head
+        while True:
+            
+            if not current:
+                return False
+            
+            if current in visited: 
+                return True 
+            
+            visited.add(current)
+            current = current.next
+
 """
 Solucion 1:
 
