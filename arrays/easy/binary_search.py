@@ -5,6 +5,7 @@ Given an array of integers nums which is sorted in ascending order, and an integ
 
 You must write an algorithm with O(log n) runtime complexity.
 
+https://leetcode.com/problems/binary-search/
 """
 
 
