@@ -34,8 +34,24 @@ class Solution:
             
             if slow == fast and fast and slow:
                 return True
+            
 
-    def hasCycle2(self, head) -> bool:
+    def hasCycle2(self,head) -> bool:
+
+        slow = head
+        fast =  head 
+
+        while (fast and fast.next):
+            slow = slow.next 
+            fast = fast.next.next
+
+            if slow == fast:
+                return True
+            
+        return False
+
+
+    def hasCycle3(self, head) -> bool:
         visited = set()
         current = head
         while True:
