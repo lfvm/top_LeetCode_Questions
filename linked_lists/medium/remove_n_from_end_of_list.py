@@ -24,10 +24,8 @@ class Solution(object):
         slow = dummy 
         fast = head
 
-        for i in range(n):
-            fast = fast.next 
+
         
-        # Covers the edge case for when n is the as the length of the list
         if not fast:
             return head.next
 
@@ -37,7 +35,8 @@ class Solution(object):
 
         slow.next = slow.next.next
 
-        return head    
+        #return the head
+        return dummy.next    
 
 
 
