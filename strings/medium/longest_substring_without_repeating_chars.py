@@ -15,8 +15,34 @@ Explanation: The answer is "b", with the length of 1.
 """
 
 
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        
+        # Sliding window technique O(n)
+
+        charset = set()
+        result = 0 
+        l = 0 
+
+        for r in range(len(s)):
+
+            while s[r] in charset:
+
+                charset.remove(s[l])
+                l += 1 
+            
+            charset.add(s[r])
+            result = max(result, r-l + 1)
+        return result 
+       
+
+"""
+Solucion 1 Sliding Window 
+"""
 
 def lengthOfLongestSubstring( s: str ) -> int:
+
+    # O(n2) time solution brute force 
     
     maxLength = 0 
     i = 0 
@@ -51,7 +77,7 @@ def lengthOfLongestSubstring( s: str ) -> int:
             
 
 """
-Solucion 1:
+Solucion 2 Brute force:
 
 Utilizar dos pointers y un hasmap para ver si se encuentran elementos repetidos:
 
